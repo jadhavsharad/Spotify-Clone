@@ -19,7 +19,7 @@ export default function Spotify() {
 
                 <div className='pt-2 pr-2 pb-2 pl-2 lg:pl-1 overflow-scroll'>
                     <div className="spotify__content overflow-hidden rounded-lg bg-gradient-to-t h-full from-[#000] to-slate-900 bg-opacity-20 p-2">
-                        <div className="spotify__navbar">
+                        <div className="spotify__navbar z-[9999]">
                             <Navbar />
                         </div>
 
@@ -31,7 +31,7 @@ export default function Spotify() {
             </div>
 
 
-            <div className="spotify__player bg-[#181818] fixed bottom-0 w-full h-[15vh]">
+            <div className="spotify__player bg-[#181818] fixed bottom-0 w-full h-[15vh] z-[9999]">
                 <Player />
             </div>
         </div>
