@@ -13,10 +13,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
 }
 
-body {
-  min-width: 512px;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -28,52 +31,29 @@ body {
     'opsz' 48
 }
 
-
-/* Spotify.jsx */
-.container {
-  max-width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
+/* Spotify Main Container (Body + Player) */
+.spotify__container {
   display: grid;
-  grid-template-rows: 85vh 15vh;
+  grid-template-rows: 85vh auto;
 }
 
+/* Spotify Body Content (Sidebar + Main Body) */
 .spotify__body {
-  background: linear-gradient(transparent,  rgba(0,0,0,0.85));
-  background-color: rgb(32, 87, 100);
+  display: grid;
+  grid-template-columns: 25vw 75vw;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .spotify__body {
     display: grid;
-    grid-template-columns: 25vw 75vw;
+    grid-template-columns: auto;
   }
 }
 
-.body {
-  height: 100%;
-  width: 100%;
+/* Spotify Content (Navbar + Track Section) */
+.spotify__content {
+  display: grid;
+  grid-template-rows: 20% 80%;
 }
 
-.spotify__footer {
-  height: 100%;
-}
-
-
-/* Sidebar.jsx */
-.sidebar-links li {
-  color: #808080;
-}
-
-.active {
-  color: white;
-}
-
-a {
-  font-family: 'Ubuntu';
-  font-weight: 600;
-  font-size: 1vi;
-  padding: 0.75rem 0rem;
-}
-
-/* Login.jsx */
+/* Spotify Album Section */
