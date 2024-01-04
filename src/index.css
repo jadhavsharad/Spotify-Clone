@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 768px){
   .spotify__content {
-    grid-template-rows: 18% 82%;
+    grid-template-rows: 24% 76%;
   }
 }
 /* Spotify Album Section */
