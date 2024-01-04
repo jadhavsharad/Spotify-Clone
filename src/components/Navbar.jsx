@@ -7,7 +7,7 @@ import setting from '../assets/setting.svg'
 export default function Navbar() {
   
   return (
-    <div className=' p-4 lg:px-10 flex justify-between'>
+    <div className=' p-4 lg:px-10 flex lg:block justify-between'>
       <div className='hidden p-4 lg:flex justify-between w-full'>
         <div className='flex gap-2 font-bold'>
 
@@ -38,10 +38,12 @@ export default function Navbar() {
 
         </div>
       </div>
+
+      
       <div>
         <h1 className='text-white font-bold text-3xl'>Good Evening</h1>
       </div>
-      <div className='cursor-pointer'>
+      <div className='cursor-pointer lg:hidden'>
         <img src={setting} className='w-10' alt="" />
       </div>
     </div>

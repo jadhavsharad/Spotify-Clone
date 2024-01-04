@@ -48,12 +48,18 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-columns: auto;
   }
+
 }
 
 /* Spotify Content (Navbar + Track Section) */
 .spotify__content {
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 24% 76%;
 }
 
+@media (max-width: 1024px){
+  .spotify__content {
+    grid-template-rows: 14% 86%;
+  }
+}
 /* Spotify Album Section */
